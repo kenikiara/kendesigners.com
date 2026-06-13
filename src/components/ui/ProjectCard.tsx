@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Project } from "@/lib/projects";
 import { cn } from "@/lib/cn";
+import { asset } from "@/lib/asset";
 
 /** A project shown inside a faux browser window. */
 export function ProjectCard({
@@ -34,7 +35,7 @@ export function ProjectCard({
         {/* screenshot */}
         <div className="relative aspect-[16/10] overflow-hidden bg-canvas">
           <Image
-            src={project.image}
+            src={asset(project.image)}
             alt={`${project.name} — ${project.blurb}`}
             fill
             priority={priority}

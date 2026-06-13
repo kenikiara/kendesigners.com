@@ -5,6 +5,7 @@ import Image from "next/image";
 import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { asset } from "@/lib/asset";
 
 const stats = [
   { to: 50, suffix: "+", label: "Projects delivered" },
@@ -83,7 +84,7 @@ export function Proof() {
             <div className="relative mx-auto max-w-md overflow-hidden rounded-3xl border border-border bg-surface p-6 shadow-[0_20px_60px_-20px_rgba(37,99,235,0.3)]">
               <div className="relative aspect-square">
                 <Image
-                  src="/award.jpg"
+                  src={asset("/award.jpg")}
                   alt="Kenya Digital Excellence Awards — Best Website Developer 2025, presented to Ken Murithi"
                   fill
                   sizes="(max-width: 1024px) 90vw, 460px"

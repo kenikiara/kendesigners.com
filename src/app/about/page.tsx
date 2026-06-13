@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CTA } from "@/components/sections/CTA";
+import { asset } from "@/lib/asset";
 
 export const metadata: Metadata = {
   title: "About",
@@ -60,7 +61,7 @@ export default function AboutPage() {
             <Reveal y={28}>
               <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-border bg-gradient-to-b from-blue-50 to-surface">
                 <Image
-                  src="/ken.png"
+                  src={asset("/ken.png")}
                   alt="Ken Murithi, founder of Ken Designers"
                   fill
                   sizes="(max-width: 1024px) 80vw, 400px"

@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // Expose the base path to client code so /public asset URLs resolve
+  // correctly on GitHub Pages project sites (next/image does not prefix them).
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath ?? "",
+  },
 };
 
 export default nextConfig;

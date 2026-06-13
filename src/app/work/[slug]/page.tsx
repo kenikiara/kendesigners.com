@@ -7,6 +7,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTA } from "@/components/sections/CTA";
 import { projects, getProject } from "@/lib/projects";
+import { asset } from "@/lib/asset";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -89,7 +90,7 @@ export default async function CaseStudy({
               </div>
               <div className="relative aspect-[16/10]">
                 <Image
-                  src={project.image}
+                  src={asset(project.image)}
                   alt={`${project.name} — homepage`}
                   fill
                   priority
