@@ -31,6 +31,10 @@ jobs:
 
       - name: Build (static export)
         run: npm run build
+        env:
+          # Preview phase: project-page base path. Remove when moving to the
+          # custom domain (kendesigners.com) and restore public/CNAME.
+          PAGES_BASE_PATH: /kendesigners.com
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
