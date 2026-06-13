@@ -6,6 +6,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CTA } from "@/components/sections/CTA";
 import { asset } from "@/lib/asset";
+import { AwardCards } from "@/components/ui/AwardCards";
+import { CeremonyGallery } from "@/components/ui/CeremonyGallery";
 
 export const metadata: Metadata = {
   title: "About",
@@ -91,6 +93,40 @@ export default function AboutPage() {
                 </div>
               </Reveal>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Recognition */}
+      <section className="py-24">
+        <Container>
+          <Reveal>
+            <Eyebrow>Recognition</Eyebrow>
+            <h2 className="mt-5 max-w-2xl font-display text-4xl tracking-tight text-heading sm:text-5xl">
+              Recognised at Kenya&rsquo;s national awards.
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+              Three national awards for web and e-commerce development —
+              independent recognition that the work delivers.
+            </p>
+          </Reveal>
+          <div className="mt-12">
+            <AwardCards />
+          </div>
+        </Container>
+      </section>
+
+      {/* Ceremony */}
+      <section className="bg-surface py-24">
+        <Container>
+          <Reveal>
+            <Eyebrow>The night</Eyebrow>
+            <h2 className="mt-5 font-display text-4xl tracking-tight text-heading sm:text-5xl">
+              Awards ceremony.
+            </h2>
+          </Reveal>
+          <div className="mt-12">
+            <CeremonyGallery />
           </div>
         </Container>
       </section>
